@@ -166,4 +166,10 @@ with gr_interface:
 app = gr.mount_gradio_app(app, gr_interface, path="/")
 
 if __name__ == "__main__":
-    uvicorn.run(app, port=8000)
+    import os
+
+    port = int(os.environ.get("PORT", 8000))         # Use Render's port or default to 8000
+    host = os.environ.get("HOST", "127.0.0.1")        # Use 127.0.0.1 locally, override to 0.0.0.0 on Render
+
+    uvicorn.run(app, host=host, port=port)
+
