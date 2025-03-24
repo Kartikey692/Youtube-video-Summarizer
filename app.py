@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from pinecone import Pinecone, ServerlessSpec
 from youtube_transcript_api import YouTubeTranscriptApi
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.vectorstores import Pinecone as VectorStorePinecone
+from langchain_community.vectorstores import Pinecone as VectorStorePinecone
 from langchain_mistralai import ChatMistralAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
