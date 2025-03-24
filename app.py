@@ -165,6 +165,11 @@ with gr_interface:
 # Run FastAPI with Gradio
 app = gr.mount_gradio_app(app, gr_interface, path="/")
 
+@app.get("/")
+def read_root():
+    return {"message": "YouTube Summarizer is running!"}
+if __name__ == "__main__":
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
     uvicorn.run("app:app", host="0.0.0.0", port=port)
