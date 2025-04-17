@@ -1,4 +1,4 @@
-### LIVE LINK -> https://youtube-video-summarizer-xgzn.onrender.com
+
 
 
 # 🎥 YouTube Video Summarizer & Q&A  
